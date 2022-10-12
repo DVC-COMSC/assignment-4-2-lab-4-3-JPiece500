@@ -24,39 +24,40 @@
 
 #include <iostream>
 using namespace std;
+
 int main() {
- double RATE2 = 1.10;
-   double RATE6 = 2.20;
-   double RATE10 = 3.70;
-   double RATE20 = 4.80;
-  double weight, distance, dRate, price;
+double r1 = 1.10, r2 = 2.20, r3 = 3.70, r4 = 4.80;
 
-  cout << "Enter the package weight and distance\n";
-  cin >> weight >> distance;
-  //? Input Validation
-  if ((weight < 0) && (weight > 20)) {
-    cout << "The package weight must be a positive number and less than 20.\n";
-    exit(0);
-  }
+double weight, dis, price, dr;
 
-  if (weight < 2)
-    dRate = RATE2;
-  else if (weight < 6)
-    dRate = RATE6;
-  else if (weight < 10)
-    dRate = RATE10;
-  else if (weight <= 20)
-    dRate = RATE20;
-  else {
-    cout << "The weight must be less than 20\n";
-    exit(0);
-  }
+cout << "Enter package weight and the shipping distance: ";
+cin >> weight >> dis;
 
-  if (distance < 500) {
-    price = dRate;
-    }
-  else {
-    price = (distance / 500.0) * dRate;
-  cout << "The shipping price for package is " << price << endl;
+if ((weight < 0) || (weight > 20)){
+ cout << "INVALID WEIGHT";
+  return (0);
+} 
+  
+if ((dis < 10) || (dis > 3000)){ 
+  cout << "INVALID DISTANCE";
+  return (0);
 }
-    }
+if (dis > 500) {
+ price = (dis / 500) * dr;
+}
+else { price = dr; } 
+
+if (weight < 2) { dr = r1; }
+
+else if ((weight > 2) && (weight <= 6)) { dr = r2; }
+
+else if ((weight > 6) && (weight <= 10)) { dr = r3; }
+
+else if ((weight > 10) && (weight <= 20)) { dr = r4; }
+
+else { cout << "packages less than 20 are permitted."; 
+  exit (0);
+  }
+
+cout << "The shipping price for the package is " << price << endl; 
+}
