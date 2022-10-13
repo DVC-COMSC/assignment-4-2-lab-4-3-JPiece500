@@ -34,13 +34,13 @@ cout << "Enter package weight and the shipping distance: ";
 cin >> weight >> dis;
 
 if ((weight < 0) || (weight > 20)){
- cout << "INVALID WEIGHT";
-  return (0);
+ cout << "INVALID WEIGHT\n";
+  exit (0);
 } 
   
 if ((dis < 10) || (dis > 3000)){ 
-  cout << "INVALID DISTANCE";
-  return (0);
+  cout << "INVALID DISTANCE\n";
+  exit (0);
 }
 if (dis > 500) {
  price = (dis / 500) * dr;
