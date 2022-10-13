@@ -31,18 +31,15 @@ double r1 = 1.10, r2 = 2.20, r3 = 3.70, r4 = 4.80;
 
 double weight, dis, price, dr;
 
-cout << "Enter package weight and the shipping distance: \n";
+cout << "Enter package weight and the shipping distance: ";
 cin >> weight >> dis;
   
 if ((weight < 0) || (weight > 20)){
- cout << "INVALID WEIGHT.\n";
+ cout << "\nThe package weight must be a positive number and less than 20.\n";
   exit (0);
 } 
   
-if ((dis < 10) || (dis > 3000)){ 
-  cout << "INVALID DISTANCE.\n";
-  exit (0);
-}
+
 
 if (weight < 2) { dr = r1; }
 
