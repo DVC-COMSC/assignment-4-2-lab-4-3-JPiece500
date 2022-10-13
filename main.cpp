@@ -23,6 +23,7 @@
 // 	print out the charge, distance, weight.
 
 #include <iostream>
+#include <iomanip> 
 using namespace std;
 
 int main() {
@@ -32,20 +33,16 @@ double weight, dis, price, dr;
 
 cout << "Enter package weight and the shipping distance: \n";
 cin >> weight >> dis;
-
+  
 if ((weight < 0) || (weight > 20)){
- cout << "INVALID WEIGHT\n";
+ cout << "INVALID WEIGHT.\n";
   exit (0);
 } 
   
 if ((dis < 10) || (dis > 3000)){ 
-  cout << "This distance is not allowed.\n";
+  cout << "INVALID DISTANCE.\n";
   exit (0);
 }
-if (dis > 500) {
- price = (dis / 500) * dr;
-}
-else { price = dr; } 
 
 if (weight < 2) { dr = r1; }
 
@@ -59,5 +56,11 @@ else { cout << "packages less than 20 are permitted.";
   exit (0);
   }
 
+if (dis > 500) {
+ price = (dis / 500) * dr;
+}
+else { price = dr; } 
+
+cout << setprecision(2) << fixed;
 cout << "The shipping price for the package is " << price << endl; 
 }
