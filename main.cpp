@@ -33,7 +33,7 @@ double weight, dis, price, dr;
 cout << "Enter package weight and the shipping distance: ";
 cin >> weight >> dis;
 
-if ((weight < 0) || (weight > 20)){
+if (weight < 0){
  cout << "INVALID WEIGHT";
   return (0);
 } 
