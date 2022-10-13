@@ -30,7 +30,7 @@ double r1 = 1.10, r2 = 2.20, r3 = 3.70, r4 = 4.80;
 
 double weight, dis, price, dr;
 
-cout << "Enter package weight and the shipping distance: ";
+cout << "Enter package weight and the shipping distance: \n";
 cin >> weight >> dis;
 
 if ((weight < 0) || (weight > 20)){
@@ -39,7 +39,7 @@ if ((weight < 0) || (weight > 20)){
 } 
   
 if ((dis < 10) || (dis > 3000)){ 
-  cout << "\nThis distance is not allowed.\n";
+  cout << "This distance is not allowed.\n";
   exit (0);
 }
 if (dis > 500) {
