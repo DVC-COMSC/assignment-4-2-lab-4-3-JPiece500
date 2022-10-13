@@ -39,7 +39,7 @@ if ((weight < 0) || (weight > 20)){
 } 
   
 if ((dis < 10) || (dis > 3000)){ 
-  cout << "This distance is not allowed.\n";
+  cout << "\nThis distance is not allowed.\n";
   exit (0);
 }
 if (dis > 500) {
